@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
+    // ~/klippy-env/bin/python3  ~/klipper/klippy/klippy.py ~/printer_data/config/printer.cfg -I ~/printer_data/comms/klippy.serial -l ~/printer_data/logs/klippy.log -a ~/printer_data/comms/klippy.sock -v
+    
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: klippy.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/klippy/klippy.py",
+            "args": [
+                "${userHome}/printer_data/config/printer.cfg", 
+                "-I", "${userHome}/printer_data/comms/klippy.serial", 
+                "-l", "${userHome}/printer_data/logs/klippy.log", 
+                "-a", "${userHome}/printer_data/comms/klippy.sock",
+                "-v",
+                //"-o", "${userHome}/printer_data/logs/klippy_debug.log", 
+            ],
+            "cwd": "${userHome}/klipper/klippy",
+            "console": "internalConsole",
+            "python": "${userHome}/klippy-env/bin/python3",
+        }
+    ]
+}
