@@ -1,6 +1,6 @@
-out
+out/**
+!out/FIRMWARE.BIN
 *.so
 *.pyc
-.config
 .config.old
 klippy/.version
